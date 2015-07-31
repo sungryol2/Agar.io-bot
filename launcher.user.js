@@ -189,9 +189,9 @@ console.log("Running Bot Launcher!");
         d.onresize = Ta;
         d.requestAnimationFrame(Ua);
         setInterval(V, 40);
-        y && e("#region").val(y);
+        y && e("#East Asia").val(y);
         Va();
-        ha(e("#region").val());
+        ha(e("#East Asia").val());
         0 == Ba && y && I();
         W = !0;
         e("#overlays").show();
@@ -246,7 +246,7 @@ console.log("Running Bot Launcher!");
     }
 
     function Pa() {
-        null == ka && (ka = {}, e("#region").children().each(function() {
+        null == ka && (ka = {}, e("#East Asia").children().each(function() {
             var a = e(this),
                 b = a.val();
             b && (ka[b] = a.text())
@@ -254,12 +254,12 @@ console.log("Running Bot Launcher!");
         e.get("https://m.agar.io/info", function(a) {
                 var b = {},
                     c;
-                for (c in a.regions) {
+                for (c in a.East Asias) {
                     var l = c.split(":")[0];
                     b[l] = b[l] || 0;
-                    b[l] += a.regions[c].numPlayers
+                    b[l] += a.East Asias[c].numPlayers
                 }
-                for (c in b) e('#region option[value="' + c + '"]').text(ka[c] + " (" + b[c] + " players)")
+                for (c in b) e('#East Asia option[value="' + c + '"]').text(ka[c] + " (" + b[c] + " players)")
             },
             "json")
     }
@@ -273,7 +273,7 @@ console.log("Running Bot Launcher!");
     }
 
     function ha(a) {
-        a && a != y && (e("#region").val() != a && e("#region").val(a), y = d.localStorage.location = a, e(".region-message").hide(), e(".region-message." + a).show(), e(".btn-needs-server").prop("disabled", !1), ya && I())
+        a && a != y && (e("#East Asia").val() != a && e("#East Asia").val(a), y = d.localStorage.location = a, e(".East Asia-message").hide(), e(".East Asia-message." + a).show(), e(".btn-needs-server").prop("disabled", !1), ya && I())
     }
 
     function Sa(a) {
@@ -287,8 +287,8 @@ console.log("Running Bot Launcher!");
     }
 
     function Va() {
-        e("#region").val() ? d.localStorage.location = e("#region").val() : d.localStorage.location && e("#region").val(d.localStorage.location);
-        e("#region").val() ? e("#locationKnown").append(e("#region")) : e("#locationUnknown").append(e("#region"))
+        e("#East Asia").val() ? d.localStorage.location = e("#East Asia").val() : d.localStorage.location && e("#East Asia").val(d.localStorage.location);
+        e("#East Asia").val() ? e("#locationKnown").append(e("#East Asia")) : e("#locationUnknown").append(e("#East Asia"))
     }
 
     function sb() {
@@ -1294,7 +1294,7 @@ console.log("Running Bot Launcher!");
                 dArc = [],
                 dText = [],
                 lines = [],
-                names = ["NotReallyABot"],
+                names = ["엉아"],
                 originalName = names[Math.floor(Math.random() * names.length)],
                 sessionScore = 0,
                 serverIP = "",
@@ -1390,7 +1390,7 @@ console.log("Running Bot Launcher!");
                     cb();
                     R = 0
                 };
-                d.setRegion = ha;
+                d.setEast Asia = ha;
                 d.setSkins = function(a) {
                     kb = a
                 };
@@ -1839,7 +1839,7 @@ console.log("Running Bot Launcher!");
                         }
                     }(),
                     U = {},
-                    ob = "notreallyabot;poland;usa;china;russia;canada;australia;spain;brazil;germany;ukraine;france;sweden;chaplin;north korea;south korea;japan;united kingdom;earth;greece;latvia;lithuania;estonia;finland;norway;cia;maldivas;austria;nigeria;reddit;yaranaika;confederate;9gag;indiana;4chan;italy;bulgaria;tumblr;2ch.hk;hong kong;portugal;jamaica;german empire;mexico;sanik;switzerland;croatia;chile;indonesia;bangladesh;thailand;iran;iraq;peru;moon;botswana;bosnia;netherlands;european union;taiwan;pakistan;hungary;satanist;qing dynasty;matriarchy;patriarchy;feminism;ireland;texas;facepunch;prodota;cambodia;steam;piccolo;ea;india;kc;denmark;quebec;ayy lmao;sealand;bait;tsarist russia;origin;vinesauce;stalin;belgium;luxembourg;stussy;prussia;8ch;argentina;scotland;sir;romania;belarus;wojak;doge;nasa;byzantium;imperial japan;french kingdom;somalia;turkey;mars;pokerface;8;irs;receita federal;facebook".split(";"),
+                    ob = "엉아;poland;usa;china;russia;canada;australia;spain;brazil;germany;ukraine;france;sweden;chaplin;north korea;south korea;japan;united kingdom;earth;greece;latvia;lithuania;estonia;finland;norway;cia;maldivas;austria;nigeria;reddit;yaranaika;confederate;9gag;indiana;4chan;italy;bulgaria;tumblr;2ch.hk;hong kong;portugal;jamaica;german empire;mexico;sanik;switzerland;croatia;chile;indonesia;bangladesh;thailand;iran;iraq;peru;moon;botswana;bosnia;netherlands;East Asiaan union;taiwan;pakistan;hungary;satanist;qing dynasty;matriarchy;patriarchy;feminism;ireland;texas;facepunch;prodota;cambodia;steam;piccolo;ea;india;kc;denmark;quebec;ayy lmao;sealand;bait;tsarist russia;origin;vinesauce;stalin;belgium;luxembourg;stussy;prussia;8ch;argentina;scotland;sir;romania;belarus;wojak;doge;nasa;byzantium;imperial japan;french kingdom;somalia;turkey;mars;pokerface;8;irs;receita federal;facebook".split(";"),
                     Gb = ["8", "nasa"],
                     Hb = ["m'blob"];
                 Ka.prototype = {
@@ -2006,7 +2006,7 @@ console.log("Running Bot Launcher!");
                             }
                             a.closePath();
                             d = this.name.toLowerCase();
-                            !this.n && kb && ":teams" != P ? -1 != ob.indexOf(d) ? (U.hasOwnProperty(d) || (U[d] = new Image, (d == "notreallyabot" ? U[d].src = "http://i.imgur.com/q5FdCkx.png" : U[d].src = "skins/" +
+                            !this.n && kb && ":teams" != P ? -1 != ob.indexOf(d) ? (U.hasOwnProperty(d) || (U[d] = new Image, (d == "엉아" ? U[d].src = "http://i.imgur.com/q5FdCkx.png" : U[d].src = "skins/" +
                                 d + ".png")), c = 0 != U[d].width && U[d].complete ? U[d] : null) : c = null : c = null;
                             c = (e = c) ? -1 != Hb.indexOf(d) : !1;
                             b || a.stroke();
